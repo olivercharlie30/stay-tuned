@@ -102,6 +102,25 @@ window.addEventListener("scroll", ()=> {
   //  })
  
 
+  //NAVBARHAMBURGER OPEN
+  document.querySelector(".navbarhamburger").addEventListener("click", ()=> {
+    alert("open");
+     document.querySelector(".searchUlists").style.display = "flex";
+     document.querySelector(".navbarhamburger").style.display = "none";
+     document.querySelector(".navbarHamburgerClose").style.display = "flex";
+       
+
+     document.querySelector(".navbarhamburger").style.border = "2px solid black";
+  })
+    //NAVBARHAMBURGER CLOSE
+  document.querySelector(".navbarHamburgerClose").addEventListener("click", ()=> {
+    alert("close");
+     document.querySelector(".searchUlists").style.display = "none";
+     document.querySelector(".navbarhamburger").style.display = "flex";
+     document.querySelector(".navbarHamburgerClose").style.display = "none";
+    
+  })
+
 
 
 
