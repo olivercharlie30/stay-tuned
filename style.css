@@ -11,7 +11,9 @@
     color: white;
 }
 
-
+body{
+    background-color: whitesmoke;
+}
 
 
 .container{
@@ -163,65 +165,124 @@ content{
 
 }
 
-
-.postVideoContent{
+.content .postImageContent{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 700px;
+    height: auto;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    /* padding: 10px 10px 10px 10px; */
-   
+    background-color: white;
+    /* padding:30px 30px ; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
     border-radius: 10px;
-    position: relative;
-
-}
-.postVideoContent > video {
-    height:99vh;
-    width: 100%; 
-    padding-top: 5px;
-    padding-bottom: 3px;
-    border-radius: 50px;
- 
-}
-.postVideoContent > p{
-    text-align: center;
-    padding: 10px 10px;
     
 }
 
-.postVideoContent .postVideoContentLike{
+.postImageContent .postIcon{
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    list-style: none;
-    padding: 5px 5px;
-    position: absolute;
-    color: black;
-
-    right: 120px;
-    bottom: 50px;
-}
-
-.postVideoContentLike > li {
+    justify-content: end;
     cursor: pointer;
-    font-size: larger;
-    font-weight: bolder;
-    background-color: whitesmoke;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px 10px;
-    border-radius: 30px;
-     text-align: center;
-     transition: 0.2s;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 
-.postVideoContentLike > li:hover {
-     padding: 10px 10px;
+
+.postImageContent .postIcon .fa-angles-right{
+    margin-right: 15px;
+}
+.fa-angles-right:hover{
+   transition: 0.3s ease;
+}
+
+.fa-angles-right:hover{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+.fa-xmark:hover{
+    transition: 0.3s ease;
+ }
+ 
+ .fa-xmark:hover{
      background-color: black;
      color: white;
+     border-radius: 10px;
+ }
+.postImageContent .user{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.user .userProfile{
+    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+.postImageContent .dateTime{
+   font-size: small;
+   font-weight: bold;
+   padding-left: 80px;
+   padding-bottom: 10px;
+}
+
+ .category{
+    padding: 10px 10px;
+    text-align:left;
+    gap: 5px;
+    font-style: italic;
+    
+}
+
+ .textMore{
+    display: none;
+}
+
+.showMore{
+    display: flex;
 }
 
 
+.postImageContent .readMoreBtn{
+    padding: 3px 3px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-weight: 650;
+    display: none;
+}
+.postImageContent .readMoreBtn:hover{
+    padding: 3px 3px;
+    margin-left: 5px;
+    text-decoration: underline;
+}
+.postImageContent .postImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.postImageContent .countLike{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    cursor: pointer;
+}
+.postImageContent .likeSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 10px;
+    border-top: 2px solid black;
+    cursor: pointer;
+}
 content .shoppingDiv{
     display: flex;
     flex-direction: column;
@@ -370,10 +431,6 @@ content .shoppingDiv{
         display: none;
     }
 
-
-
-
-
     content{
         grid-area: content;
     }
@@ -419,6 +476,105 @@ content .shoppingDiv{
     .shoppingCard > p{
         text-align: center;
         padding: 5px 15px;
+    }
+
+    .content .postImageContent{
+        font-family: Arial, Helvetica, sans-serif;
+        width: 500px;
+        height: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        background-color: whitesmoke;
+        /* padding:30px 30px ; */
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+        border-radius: 10px;
+        
+    }
+    
+    .postImageContent .postIcon{
+        display: flex;
+        justify-content: end;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    
+    
+    
+    .postImageContent .postIcon .fa-angles-right{
+        margin-right: 15px;
+    }
+    .postImageContent .user{
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+    }
+    .user .userProfile{
+        margin-right: 10px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+    }
+    
+    .postImageContent .dateTime{
+       font-size: small;
+       font-weight: bold;
+       padding-left: 80px;
+       padding-bottom: 10px;
+    }
+    
+     .category{
+        padding: 10px 10px;
+        text-align:left;
+        gap: 5px;
+        font-style: italic;
+        
+    }
+    
+     .textMore{
+        display: none;
+    }
+    
+    .showMore{
+        display: flex;
+    }
+    
+    
+    .postImageContent .readMoreBtn{
+        padding: 3px 3px;
+        margin-left: 5px;
+        cursor: pointer;
+        font-weight: 650;
+    }
+    .postImageContent .readMoreBtn:hover{
+        padding: 3px 3px;
+        margin-left: 5px;
+        text-decoration: underline;
+    }
+    .postImageContent .postImage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 70vh ;
+    }
+    
+    .postImageContent .countLike{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 15px;
+        cursor: pointer;
+    }
+    .postImageContent .likeSection{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 10px;
+        border-top: 2px solid black;
+        cursor: pointer;
     }
 
  }
@@ -474,7 +630,7 @@ content .shoppingDiv{
         color: white;
         border: 1px solid black;    }
 
-        .navbarHamburgerClose{
+    .navbarHamburgerClose{
             margin: auto;
             display: none;
         }

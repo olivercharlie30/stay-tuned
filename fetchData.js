@@ -1,26 +1,5 @@
 
-fetch('https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg')
-.then(Response => {
 
-  console.log(Response);
-  return Response.blob();
-
-}).then(blob => {
-    console.log(blob);
-    document.querySelector("#myImage").src = URL.createObjectURL(blob);
-
-}).catch(error => {
-    console.log(error);
-})
-
-
-
-// FAKE STORE API
-// console.log(fetch('https://fakestoreapi.com/products'));
-
-// fetch('https://fakestoreapi.com/products')
-//   .then(response => response.json())
-//   .then(data => console.log(data));
 
 fetch('https://fakestoreapi.com/products')
   .then(data => {
@@ -29,16 +8,32 @@ fetch('https://fakestoreapi.com/products')
     // console.log(completedate[5].title);
     let data1 = " ";
     completedate.map((values)=> {
-      data1 += `<div class="shoppingDiv"> 
-                     <div class="shoppingCard">
-                        <span>${values.id}</span>
-                          <h4 class="title">${values.title}</h4>
-                            <img src=${values.image} width="250px" height="250px" alt="image Error">
-                            <p>${values.description}</p>
-                            <p class="category">${values.category}</p>
-                            <p class="price">${values.price}</p>
-                           </div>
-                        </div>
+      data1 += ` <div class="postImageContent">
+                  <div class="postIcon">
+                    <i class="fa-sharp fa-solid fa-angles-right"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                  <div class="user">
+                    <img class="userProfile" src="video/pexels-gya-den-768256-2386141.jpg" width="250px"/>
+                    <div class="username"><strong>${values.title}</strong></div>
+                  </div>
+                 
+                  <div class="dateTime">May 1 at 6:20 PM </div>
+                  <div class="category"><p>${values.category}<span class="textMore"></span></p>
+                      </div>
+                      <span class="readMoreBtn"><i class="fa-solid fa-angles-right"></i> See More....</span>
+                    <img class="postImage" src="${values.image}" alt="error image"/>
+                    <div class="countLike">
+                      <span>100k</span>
+                      <span>1.5k comments</span>
+                      <span>350 shares</span>
+                    </div>
+                    <div class="likeSection">
+                      <span class="like"><i class="fa-regular fa-thumbs-up"></i>Like</span>
+                      <span class="comment"><i class="fa-regular fa-comment"></i>Comments</span>
+                      <span class="share"><i class="fa-solid fa-share"></i>share</span>
+                    </div>
+                 </div>
                         `;
     });
 
@@ -47,8 +42,6 @@ fetch('https://fakestoreapi.com/products')
   }).catch((error)=>{
     console.log(error);
   })
-
-
 
 
 

@@ -168,25 +168,19 @@ document.querySelector(".moreCloseSettings").addEventListener("click", ()=>{
 
 
 
-class person{
-  constructor(id, fullName, age) {
-    this.id = id;
-    this.fullName = fullName;
-    this.age = age = age;
-  }
+  //SEE MORE FUNCTION
+  let category = document.querySelector(".textMore");
 
-  output() {
-    // document.querySelector(".id").innerHTML = `id: ${this.id}`;
-    // document.querySelector(".fullName").innerHTML = `fullName: ${this.fullName}`;
-    // document.querySelector(".age").innerHTML = `age: ${this.age}`;
+  let readMoreBtn = document.querySelector(".readMoreBtn").addEventListener("click", (e)=> {
+    category.classList.toggle("showMore");
+    readMoreBtn.style.display = "none";
+     
+  })
 
-    console.log(`id: ${this.id}`);
-    console.log(`fullName: ${this.fullName}`);
-    console.log(`age: ${this.age}`);
-    
-  }
-}
 
-let person1 = new person(1, 'Oliver Charlie G. Lapinig', 30);
+document.querySelector(".like").addEventListener("click", ()=> {
+  alert("like");
+   document.querySelector(".like").style.color = "blue";
+})
 
-person1.output();
+
